@@ -1,0 +1,157 @@
+
+html {background-color:#F4F4F4;
+padding-top: 200px;
+padding-right: 100px;
+padding-bottom: 150px;
+padding-left: 100px;
+
+ }
+/* Page colour ^ */
+
+body { color: #3F383A;
+	/*text-align: center;*/
+	font-family: 'Koh Santepheap', sans-serif;
+ }
+
+/*Structure Styling ^*/
+
+a {text-decoration: none; 
+	color: #CC4D69;
+}
+
+a:hover { color: #4EB1CC; }
+
+/* Link ^ */
+
+h1 {font-family:'Koh Santepheap', sans-serif;
+	font-size: 60px;
+	/*margin: 20px;*/
+	
+}
+
+h2 {font-family: 'Koh Santepheap', sans-serif; 
+	margin: 24px;
+	font-size: 24px;
+	text-align: center;
+}
+
+h2:hover { color: #F8C017;
+ }
+
+h3 {font-family: 'Koh Santepheap', sans-serif;
+	margin-bottom: 10px; 
+}
+
+
+/*fonts ^ */
+
+img {  width: 220px; 
+    height: 220px;  
+    object-fit: cover;
+    border: 0px solid #D41C5F;
+    margin: 20px;
+    text-align: center;
+    border-radius: 3%;
+    display: inline-block;
+}
+
+
+img:hover {border: 2px solid; color: #F8C017;
+	height: 250px;
+	width: 250px;
+	animation: 1s;
+	position: absolute;
+}
+
+/*Image styles ^ */
+
+
+.title {position: absolute;
+	padding-bottom: 0px;
+	top: 20px;
+	left: 80px;
+	display: inline-block;
+	float: left;
+}
+
+#name {font-size: 20px; 
+	position: absolute;
+	color: #CC4D69; 
+	top: 110px;
+	left: 100px;
+}
+
+#name:hover {color: #F8C017;
+	font-size: 26px;
+}
+
+.pics {display: inline;
+	float: center;
+	text-align: center;
+	width: 75%;
+	overflow: hidden;
+	height: auto;
+	margin-left: 20px;
+	padding-left: 20px;
+}
+
+.dates {
+	font-size: 24px;
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+}
+
+#years { 
+	position: fixed;
+	top: 370px;
+	right: 315px;
+ }
+
+#years:hover {font-size: 32px;}
+
+#thumbNail { position: fixed;
+	top: 50px;
+	right: 50px;
+	height: 80px;
+	width: 80px;
+	border-radius: 100%;
+}
+
+#thumbNail:hover {height: 120px;
+	width: 120px;}
+
+#Assignment { position: absolute;
+	top: 740px;
+	right: 10px;
+	margin-left: 200px; }
+
+#Assignment:hover  {color: #CC4D69;}
+
+#studentNumber {
+	position: absolute;
+	top: 470px;
+	right: 1740px;
+	writing-mode: vertical-rl;
+	text-orientation: sideways-right;
+}
+
+#studentNumber:hover { font-size: 30px;
+						color:#F8C017 ; }
+
+
+#textTwo {
+	margin-bottom: 0px;
+	}
+
+
+#bio { font-size: 12px;
+	position: fixed;
+	color: #CC4D69; 
+	top: 95px;
+	right: 175px;
+
+ }	
+
+#bio:hover { color: #4EB1CC; }
+
+
