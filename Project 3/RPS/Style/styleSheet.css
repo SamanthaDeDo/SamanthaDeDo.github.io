@@ -1,0 +1,222 @@
+
+body {
+	background-color: #343740;
+	margin-top: 5%;
+	padding-bottom: 10%;
+
+}
+
+
+/* User choice, VS(countdown), Computer Choice */
+#og {
+	height: 200px;
+	width: 60%;
+	border-style: dotted;
+	border-color: #f5f8fc;
+	background-color: black;
+	border-width: 2.5px;
+	display: flex;
+	flex-direction: row;
+	margin-left: 20%;
+	justify-content: space-around;
+	align-content: stretch;
+	background-image: url(https://media.istockphoto.com/photos/futuristic-scifi-concrete-room-with-glowing-neon-virtual-reality-picture-id1174871534?k=20&m=1174871534&s=612x612&w=0&h=jWkOvWaUj18f0w2ZVTdnFyoHBkR5X2nKuvp3wx9Gqvw=);
+	background-position: center;
+}
+
+
+/* the characters */
+#player{
+	width: 150px;
+	height: 150px;
+	float: left;
+	padding: 20px;
+}
+
+#leroyP{
+		width: 150px;
+	height: 150px;
+	float: right;
+	padding: 20px;
+}
+
+
+/* Styling for the VS  */
+.vs{
+	font-family: 'Press Start 2P';
+	color: #f5f8fc;
+	float: center;
+	margin-top: 9%;
+	filter: drop-shadow(15px 7px .4rem #4444dd);
+}
+
+/* Player Names (Computer and User) */
+
+#players {
+	height: 10%;
+	width: 60%;
+	margin-left: 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+}
+
+#userName {
+	font-family: 'Press Start 2P';
+	color: turquoise;
+	opacity: 80%;
+}
+
+
+/* Choose your weapon lad! */
+.text{
+	/*color: #f6f8fc;*/
+	color: turquoise;
+	opacity: 80%;
+	padding-left: 34%;
+	font-family: 'Press Start 2P';
+	font-size: 24px;
+}
+
+.leroy{
+	font-family: 'Press Start 2P';	
+	font-size: 18px;
+	color: turquoise;
+	opacity: 80%;
+	border-style: dotted;
+	border-color: #f5f8fc;
+	border-width: 2px;
+	padding: 12px 20px;
+	margin-top: 0px;
+	}
+
+/* buttons */
+
+.rock{ 
+
+	font-family: 'Press Start 2P', cursive;
+	text-align: center;
+	font-size: 18px;
+	color: #f5f8fc;
+	border-width: 2px;
+	font-color: #f5f8fc;
+	border-style: solid;
+		border-color: #f5f8fc;
+	background-color: #343741;
+	padding-top: 7px;
+	width: 175px;
+	height: 50px;
+	cursor: pointer;
+	margin: 5px;
+	filter: drop-shadow(15px 7px 1.1rem #4444dd);
+}
+
+
+.paper{
+
+		font-family: 'Press Start 2P', cursive;
+	font-size: 18px;
+	color: #f5f8fc;
+	border-width: 2px;
+	font-color: #f5f8fc;
+	border-style: solid;
+	border-color: #f5f8fc;
+	text-align: center;
+	background-color: #343741;
+	padding-top: 5px;
+	width: 175px;
+	height: 50px;
+	cursor: pointer;
+	margin: 5px;
+	filter: drop-shadow(15px 7px 1.1rem #4444dd);
+}
+
+
+
+
+.scissor{
+
+	font-family: 'Press Start 2P', cursive;
+	font-size: 18px;
+	color: #f5f8fc;
+	border-width: 2px;
+	font-color: #f5f8fc;
+	border-style: solid;
+	border-color: #f5f8fc;
+	text-align: center;
+	background-color: #343741;
+	padding-top: 5px;
+	width: 175px;
+	height: 50px;
+	cursor: pointer;
+	margin: 5px;
+	filter: drop-shadow(15px 7px 1.1rem #4444dd);
+}
+
+/* Button styling */
+#butt {
+	height: 15%;
+	width: 45%;
+	margin-left: 28%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+
+/* Images */
+
+.choice{
+	display:none ;
+	width: 150px;
+	height: 150px;
+	padding: 20px;
+}
+
+
+/* results */
+
+#win{
+	height: 30px;
+	font-family: 'Press Start 2P';
+	color: #f5f8fc;
+	padding-top: 3%;
+	font-size: 32px;
+	text-align: center;
+	filter: drop-shadow(23px 7px .8rem #4444dd);
+	blur-radious: 20%;
+	}
+
+/* User Name input styling */
+
+input, #clear {
+	font-family: 'Press Start 2P';
+	display: inline-block;
+	padding: 10px 20px;
+	height: 25px;
+	width: 200px;
+	background-color: #343740;
+	border-style: dotted;
+	border-color: #f5f8fc;
+	color: turquoise;
+	text-align: center;
+	font-size: 18px;
+}
+
+
+/* Audio Styling */
+#music {
+
+	text-align: center;
+	margin-left: 5%;
+}
+
+
+audio {
+
+	width: 150px;
+	opacity: 20%;
+	filter: drop-shadow(16px 6px .3rem #4444dd);
+
+}
