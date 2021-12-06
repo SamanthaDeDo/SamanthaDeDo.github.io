@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>StoryTime</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Parisienne&family=Passions+Conflict&family=Petemoss&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+	
+	<!-- My name and  Student Number -->
+	<p style="left: 2%; top: 0%;" class="myName">Samantha De Donato</p>
+	<p style="left: 2%; top: 2%;" class="myName">100764854</p>
+
+	<!-- Music, set to loop and a starting volume of .2 -->
+	<audio id="music" controls= "loop value = 0.2">
+		<source src="sound/DisneySoundtrackOverture.mp3" controls="value = 0.2" type="">
+	</audio>
+
+	<!-- Game Sounds effect -->
+	<audio id="chime"><source src="sound/gemSound.mp3" controls= "value = 0.2" type=""> </audio>
+
+	<!-- Welcome Text (user name input) -->
+	<div id="container">
+		<br><br>
+			<div>
+				<h1 id="intro" style="font-size: 32px;">Welcome 
+	<!-- Users  name input field  -->
+					<span><input style="font-size: 28px;" id="UserName" type="text" value=""/> ,</span> <br>
+					<span style="font-size: 32px;">Snow needs your help... The Evil Queen is back!</span>
+				</h1>
+
+	<!-- Ending thank you this is set to appear after the apple game is competed font size increases with an onlick function -->
+				<h1 style="	font-size: 0px;" id="endingCredits"> Thanks to you   
+	<!-- Display User name (set to oppacity 0 until the end of game, onclick) -->
+					<input style="font-size: 34px;" type="text" id="name">
+				</h1>
+			</div>
+
+		<br>
+
+	<!-- Apples position absolute, each apple has their own onclick function for styling, positioning and relivence in the apple game -->
+		<div class="display" id="apples">
+			<img onclick="poisionApples()" class="apple" id="apple0" src="images/apples.png">
+			<img onclick="poisionApples1()" class="apple" id="apple1" src="images/apples.png">
+			<img onclick="poisionApples2()" class="apple" id="apple2" src="images/apples.png">
+			<img onclick="poisionApples3()" class="apple" id="apple3" src="images/apples.png">
+			<img onclick="poisionApples4()" class="apple" id="apple4" src="images/apples.png">
+		</div>
+
+	<!-- Apples Page Two -->
+		<div class="display" id="apples1">
+			<img onclick="poisionApples5()" class="apple" id="apple5" src="images/apples.png">
+			<img onclick="poisionApples6()" class="apple" id="apple6" src="images/apples.png">
+			<img onclick="poisionApples7()" class="apple" id="apple7" src="images/apples.png">
+			<img onclick="poisionApples8()" class="apple" id="apple8" src="images/apples.png">
+			<img onclick="poisionApples9()" class="apple" id="apple9" src="images/apples.png">
+		</div>
+		
+	<!-- Apples Page Three -->
+		<div class="display" id="apples2">
+			<img onclick="poisionApples10()" class="apple" id="apple10" src="images/apples.png">
+			<img onclick="poisionApples11()" class="apple" id="apple11" src="images/apples.png">
+			<img onclick="poisionApples12()" class="apple" id="apple12" src="images/apples.png">
+			<img onclick="poisionApples13()" class="apple" id="apple13" src="images/apples.png">
+			<img onclick="poisionApples14()" class="apple" id="apple14" src="images/apples.png">
+		</div>
+
+	<!-- Apples Page Four -->
+		<div class="display" id="apples3">
+			<img onclick="poisionApples15()" class="apple" id="apple15" src="images/apples.png">
+			<img onclick="poisionApples16()" class="apple" id="apple16" src="images/apples.png">
+			<img onclick="poisionApples17()" class="apple" id="apple17" src="images/apples.png">
+			<img onclick="poisionApples18()" class="apple" id="apple18" src="images/apples.png">
+			<img onclick="poisionApples19()" class="apple" id="apple19" src="images/apples.png">
+		</div>
+
+	<!-- Story Pages (images) This is the first image in the story and the reference id for the storybook images -->
+		<div id="images">
+			<img id="start" src="https://ucarecdn.com/ddb27a04-d669-4629-92ab-5222597b47ab/-/format/auto/-/preview/3000x3000/-/quality/lighter/">
+		</div>
+
+	<!-- User Promp (text) This text id is the starting point of the text promt array -->
+			<h3 id="text">Will you help Snow save her friends?</h3>
+
+		<br>
+
+	<!-- Start Story (button) starting point for the changing texts in the button array, the startStory() starts the series of arrays (sound, user prompts, button text and images) -->
+		<div id="button">
+			<button id="startButton" onclick="startStory()"><span id="buttonText">Let's do it!</span>
+			</button>
+		</div>
+		<br><br><br><br>
+	</div>
+
+	<!-- Pause Apple Button (controls the pauseing of the background music) set to a <p> tag that is places over a glowing apple, postion fixed at the top right corner of the screen so the user can easily see it -->
+		<div id="musicButtons">
+			<p id="iconPause" onclick="pauseAudio()" >Pause</p>
+			<img id="pause" src="images/apples.png">
+		</div>	
+			
+		
+
+	<script type="text/javascript">
+
+
+		// Music controls for the story music (pasuse and play) and the apple chime, onlick functions were added to the story sound here so it can be refferanced during the startStory function and for pausing the music with the text/ floating apple above 
+		var chime = document.getElementById('chime');
+		var audio = document.getElementById('music');
+
+			audio.volume = 0.2;
+
+			function playAudio() { 
+			  audio.play(); 
+			} 
+
+			function pauseAudio() { 
+ 			 audio.pause(); 
+			} 
+
+		
+		// Images for the story, button text and user prompts were put into an array so that they can easily be cycled through with a counter and be referanced in the startStory() function below. The counter is set to 0, so that the first image or text writen in the array will display after the first button click (triggering the startStory() and the second set follwoing ect. 
+
+		// Images for the story pages 
+
+		var storyPages = ["https://media2.giphy.com/media/up7Yq7NHsTvO0/giphy.gif?cid=ecf05e47q8y9ga05bdhrb5m45z1nb4fiqunr04kp1aknr861&rid=giphy.gif&ct=g", "https://media1.giphy.com/media/r95kAgBEzeapljl1ft/giphy.gif?cid=ecf05e47n4k2p4xcvg72nbtfv9yoa3vbxmd98v3irb342x88&rid=giphy.gif&ct=g", "https://media2.giphy.com/media/uElxuHGtIuK0o/giphy.gif?cid=ecf05e479o47g4619pgrvcrgoddf34f9gf3nc8lrpyperetx&rid=giphy.gif&ct=g", "https://i.pinimg.com/originals/8c/a3/32/8ca3322eeccf045793a6ce8f10f0e874.jpg", "http://images5.fanpop.com/image/photos/29200000/Empty-Backdrop-from-Snow-White-disney-crossover-29247016-1053-576.jpg", "http://images5.fanpop.com/image/photos/29200000/Empty-Backdrop-from-Snow-White-disney-crossover-29246973-759-576.jpg", "http://www.michaelspornanimation.com/splog/wp-content/x/_Cottage%20entrance15.jpg", "https://media3.giphy.com/media/r95kAgBEzeapljl1ft/giphy.gif?cid=ecf05e47p4a23d7gblmjpbxcwp3s56t5c61wnsjrzpnxlqmp&rid=giphy.gif&ct=g"];
+
+		//  Text for the story and to tell the user what to do, User Prompts 
+
+		var userPrompt = ["The Evil Queen is back, and looking to get revenge on Snow and her friends! The Queen is still  begrudged by her prior defeat and by Snow White's pure beauty,", "Not realizing the goodness within, is what makes Snow truly beautiful.  Now let's help Snow save her friends!", "The Evil Queen has snuck in and hidden poison apples all over the cottage, help Snow spot the poison apples!", "Click on the poison apples to destroy them!", "Help Snow distroy all the apples!", "Almost there!", "Finish helping Snow defeat the evil queen, destroy the last of the poision apples!","The Evil Queen's plan is foiled! Snow and her friends are safe and they thank you ever so kindly!"];
+
+
+		// Button texts. 
+
+		var buttonPrompt = ["Continue", "Let's Go!", "Start Mission!", "Got 'em!", "Next", "Next", "Done!"]; 
+
+		// Counter for the arrays above, and indicatory for spacific events with in the interatcion, the counter is set to increse by one to cycle through the pages arrays. When the counter reaches 2, the counter is set to not play music after the counter value is greater than two, making sure that after the fist time the button is pressed, the user is able to pause the music without the start button triggering the music to play. When the counter reaches between 4-7 the apple game starts and the apples are displayed on the screen and the button is removed. When the counter reaches 8, the start button dissapears and the ending creadits and user input field appear. 
+		var counter = 0;
+
+
+		// This function starts the interatcion, it is located on the start button on the load page, pressing this button trigges the storys background music and the three arrays the commence, while making the introduction text and user imput field dissapers with a display none.  
+		function startStory(){
+			document.getElementById("start").style.zIndex = "1";
+			document.getElementById("start").src = storyPages[counter];
+			document.getElementById("text").innerHTML = userPrompt[counter];
+			document.getElementById("buttonText").innerHTML = buttonPrompt[counter];
+			document.getElementById("intro").style.display = "none";
+			
+
+				// for the play pause function, if counter is less than 2 then play music, else dont play anything.
+
+			counter = counter +1; 
+
+			if (counter < 2){
+				audio.play(); 
+			} 
+
+			// Apple Game Page 1 - 4
+			if (counter == 4) {
+
+			// Turn button off
+				document.getElementById("button").style.display = "none";
+
+				document.getElementById("apples").style.opacity = "100%";
+
+			} if (counter == 5) {
+				document.getElementById("button").style.display = "none";
+
+				document.getElementById("apples1").style.opacity = "100%";
+				
+			} if (counter == 6) {
+				document.getElementById("button").style.display = "none";
+
+				document.getElementById("apples2").style.opacity = "100%";
+				
+			} if (counter == 7) {
+				document.getElementById("button").style.display = "none";
+
+				document.getElementById("apples3").style.opacity = "100%";
+				
+			} 
+
+
+			// Counter End, the start button is set to dissapear and the ending credits are showen by increasing there font size, the name imput field is made visable by changing the oppacity to 100% 
+
+			if (counter == 8) {
+
+				counter = 0;
+				document.getElementById("startButton").style.display = "none";
+				document.getElementById("endingCredits").style.fontSize = "36px";
+				
+			// Users name display writen in imput field on the load page 
+				document.getElementById("name").style.opacity = "100%";
+				document.getElementById("name").value = document.getElementById("UserName").value;
+
+
+			} 
+		}
+
+		// Functions were created for each page of the game, if all the apples state goes from false to true, the button for the next page appears   
+		
+		function ApplesCollected() {
+		if  (a1 == true && a0 == true && a2 == true && a3 == true && a4 == true) {
+				document.getElementById("button").style.display = "block";	
+		} 
+		}
+
+		function ApplesCollected1() {
+			if  (a5 == true && a6 == true && a7 == true && a8 == true && a9 == true) {
+				document.getElementById("button").style.display = "block";
+		} 
+		}
+
+		function ApplesCollected2(){
+			if (a10 == true && a11 == true && a12 == true && a13 == true && a14 == true) {
+				document.getElementById("button").style.display = "block";	
+		} 
+		}
+
+		function ApplesCollected3(){
+			if (a15 == true && a16 == true && a17 == true && a18 == true && a19 == true) {
+				document.getElementById("button").style.display = "block";
+		} 
+		}
+		//  Each apples has a boolen values set to false, so that when they are click their state can change from false to positive. Once all five are changed to positive on each of the four pages, the ApplesCollected() above will displaying the button to move on to the next page. 
+
+		var a0 = false; 
+		var a1 = false; 
+		var a2 = false;
+		var a3 = false; 
+		var a4 = false;  
+
+		var a5 = false;
+		var a6 = false;
+		var a7 = false;
+		var a8 = false;
+		var a9 = false;
+
+
+		var a10 = false;
+		var a11 = false;
+		var a12 = false;
+		var a13 = false;
+		var a14 = false;
+
+		var a15 = false;
+		var a16 = false; 
+		var a17 = false;
+		var a18 = false;
+		var a19 = false;
+
+
+		// (Apple Game Page One), each apple has their own function referancing specific apples above in the html, and relating them to their own onlick() of display none, that also changes their state to true (for the game), plays sound effect (chime) and refernacing the ApplesCollected() written above to include the apples in the game. 
+
+		function poisionApples() {
+			document.getElementsByClassName("apple").src = "images/apples.png";
+			document.getElementById("apple0").style.display = "none"; 
+			chime.play(); 
+			a0 =! a0; // a0 is not equal to a0
+			ApplesCollected();
+
+		} 
+
+
+		function poisionApples1() {
+			document.getElementsByClassName("apple").src = "images/apples.png";
+			document.getElementById("apple1").style.display = "none"; 
+			chime.play(); 
+			a1 =! a1;
+			ApplesCollected();
+
+		}
+
+		function poisionApples2() {
+			document.getElementsByClassName("apple").src = "images/apples.png";
+			document.getElementById("apple2").style.display = "none"; 
+			chime.play(); 
+			a2 =! a2;
+			ApplesCollected();
+			
+		}
+
+		function poisionApples3() {
+			document.getElementsByClassName("apple").src = "images/apples.png";
+			document.getElementById("apple3").style.display = "none"; 
+			chime.play(); 
+			a3 =! a3;
+			ApplesCollected();
+			
+		}
+
+		function poisionApples4() {
+			document.getElementsByClassName("apple").src = "images/apples.png";
+			document.getElementById("apple4").style.display = "none"; 
+			chime.play(); 
+			a4 =! a4;
+			ApplesCollected();
+			
+		}
+
+				// Apple Game Page Two 
+
+		function poisionApples5() {
+			document.getElementsByClassName("apple").src = "images/apples.png";
+			document.getElementById("apple5").style.display = "none"; 
+			chime.play(); 
+			a5 =! a5;
+			ApplesCollected1();
+		}
+
+
+		function poisionApples6() {
+			document.getElementsByClassName("apple").src = "images/apples.png";
+			document.getElementById("apple6").style.display = "none"; 
+			chime.play(); 
+			a6 =! a6;
+			ApplesCollected1();
+		}
+
+		function poisionApples7() {
+			document.getElementsByClassName("apple").src = "images/apples.png";
+			document.getElementById("apple7").style.display = "none"; 
+			chime.play(); 
+			a7 =! a7;
+			ApplesCollected1();
+		}
+
+		function poisionApples8() {
+			document.getElementsByClassName("apple").src = "images/apples.png";
+			document.getElementById("apple8").style.display = "none"; 
+			chime.play(); 
+			a8 =! a8;
+			ApplesCollected1();
+		}
+
+		function poisionApples9() {
+			document.getElementsByClassName("apple").src = "images/apples.png";
+			document.getElementById("apple9").style.display = "none"; 
+			chime.play(); 
+			a9 =! a9;
+			ApplesCollected1();
+		}
+
+		// Apple Game Page Three 
+
+		function poisionApples10() {
+			document.getElementsByClassName("apple").src = "images/apples.png";
+			document.getElementById("apple10").style.display = "none"; 
+			chime.play(); 
+			a10 =! a10;
+			ApplesCollected2();
+		}
+
+
+		function poisionApples11() {
+			document.getElementsByClassName("apple").src = "images/apples.png";
+			document.getElementById("apple11").style.display = "none"; 
+			chime.play(); 
+			a11 =! a11;
+			ApplesCollected2();
+		}
+
+		function poisionApples12() {
+			document.getElementsByClassName("apple").src = "images/apples.png";
+			document.getElementById("apple12").style.display = "none"; 
+			chime.play(); 
+			a12 =! a12;
+			ApplesCollected2();
+		}
+
+		function poisionApples13() {
+			document.getElementsByClassName("apple").src = "images/apples.png";
+			document.getElementById("apple13").style.display = "none"; 
+			chime.play(); 
+			a13 =! a13;
+			ApplesCollected2();
+		}
+
+		function poisionApples14() {
+			document.getElementsByClassName("apple").src = "images/apples.png";
+			document.getElementById("apple14").style.display = "none"; 
+			chime.play(); 
+			a14 =! a14;
+			ApplesCollected2();
+		}
+
+		// Apple Game Page four 
+
+		function poisionApples15() {
+			document.getElementsByClassName("apple").src = "images/apples.png";
+			document.getElementById("apple15").style.display = "none"; 
+			chime.play(); 
+			a15 =! a15;
+			ApplesCollected3();
+		}
+
+
+		function poisionApples16() {
+			document.getElementsByClassName("apple").src = "images/apples.png";
+			document.getElementById("apple16").style.display = "none"; 
+			chime.play(); 
+			a16 =! a16;
+			ApplesCollected3();
+		}
+
+		function poisionApples17() {
+			document.getElementsByClassName("apple").src = "images/apples.png";
+			document.getElementById("apple17").style.display = "none"; 
+			chime.play(); 
+			a17 =! a17;
+			ApplesCollected3();
+		}
+
+		function poisionApples18() {
+			document.getElementsByClassName("apple").src = "images/apples.png";
+			document.getElementById("apple18").style.display = "none"; 
+			chime.play(); 
+			a18 =! a18;
+			ApplesCollected3();
+		}
+
+		function poisionApples19() {
+			document.getElementsByClassName("apple").src = "images/apples.png";
+			document.getElementById("apple19").style.display = "none"; 
+			chime.play(); 
+			a19 =! a19;
+			ApplesCollected3();
+		}
+
+</script>
+</body>
+</html>
+

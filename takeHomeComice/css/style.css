@@ -1,0 +1,325 @@
+html{
+	margin-top: 10%;
+	margin-bottom: 15%;
+}
+
+/* Background image, set to display across the whole screen, no repeating.. font style for the page is also referanced */
+body{
+	background-image: url(https://www.wallpapertip.com/wmimgs/26-269971_frozen-enchanted-forest-background.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+  	background-size: 100% 100%;
+	font-family: 'IM Fell English SC', serif;
+}
+
+/* Pages font styling */
+h3, h1 {
+	color: #32a31c;
+	text-align: center;
+	font-family: 'IM Fell English SC', serif;
+}
+
+/* Stortybook container (main div) the postition had to be set to absolute for the 
+images to be layered above with the z-index as well as for the apples to be positioned ontop of the pages */
+#container {
+	height: 1100px;
+    width: 800px;
+    position: absolute;
+    margin-left: 23%;
+	/*height: 50%;
+	width: 60%;
+	margin-left: 20%;*/
+	border-style: outset;
+	border-width: 4px;
+	border-radius: 8px;
+	background-image: url(https://images.unsplash.com/photo-1604147706283-d7119b5b822c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cGFwZXIlMjB0ZXh0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60);
+	background-attachment: fixed;
+  	background-size: 100% 100%;
+ 	padding-top: 2%;
+}
+
+
+/* Apple's and apple styling and positioning of the apples for the Apple game  */
+/*#apples {
+	width: 40%;
+	margin-left: 30%;
+}*/
+
+.apple { 
+	height: 30px;
+	width: 25px;
+	z-index: 2;
+	filter: drop-shadow(0px 0px .6rem green);
+	/*display: none;*/
+}
+
+/*Apples Page One */
+#apple0 {
+	position: absolute;
+	top: 607px;
+    left: 350px;
+}
+
+.apple:hover {
+	filter: drop-shadow(0px 0px .6rem red);
+}
+
+#apple1 {
+	position: absolute;
+	top: 378px;
+    left: 75%;
+}
+
+#apple2 {
+	position: absolute;
+	top: 235px;
+    left: 58%;
+}
+
+#apple3 {
+	position: absolute;
+	top: 401px;
+    left: 21%;
+}
+
+#apple4 {
+	position: absolute;
+	top: 650px;
+    left: 18.5%;
+}
+
+/* This makes the apples dissapear!! the startStory() between counter numbers 4-7 will display the apples 
+if the apples are not all selected the user can not move on to the next page (button will not appear) */
+.display {
+	opacity: 0%;
+}
+
+/*Apples Page Two */
+#apple5 {
+	position: absolute;
+	top: 400px;
+    left: 64%;
+}
+
+#apple6 {
+	position: absolute;
+	top: 300px;
+    left: 52.5%;
+}
+
+#apple7 {
+	position: absolute;
+	top: 212px;
+    left: 88%;
+}
+
+#apple8 {
+	position: absolute;
+	top: 500px;
+    left: 30%;
+}
+
+#apple9 {
+	position: absolute;
+	top: 20.2%;
+    left: 58.5%;
+}
+
+
+/*Apples Page Three */
+#apple10 {
+	position: absolute;
+	top: 233px;
+    left: 74%;
+}
+
+#apple11 {
+	position: absolute;
+	top: 481px;
+    left: 15%;
+}
+
+#apple12 {
+	position: absolute;
+	top: 405px;
+    left: 56%;
+}
+
+#apple13 {
+	position: absolute;
+	top: 616px;
+    left: 38%;
+}
+
+#apple14 {
+	position: absolute;
+	top: 647px;
+    left: 77.5%;
+}
+
+
+/*Apples Page Four */
+#apple15 {
+	position: absolute;
+	top: 313px;
+    left: 65%;
+}
+
+#apple16 {
+	position: absolute;
+	top: 500px;
+    left: 59%;
+}
+
+#apple17 {
+	position: absolute;
+	top: 447px;
+    left: 24%;
+}
+
+#apple18 {
+	position: absolute;
+	top: 195px;
+    left: 24%;
+}
+
+#apple19 {
+	position: absolute;
+	top: 578px;
+    left: 60%
+}
+
+
+/* Images in the storyPages Array */
+#images {
+	display: flex;
+	justify-content: space-around;
+	padding: 2%;
+	/*position: fixed;
+    left: 29%;*/
+}
+
+#start {
+	width: 675px;
+	height: 550px;
+	object-fit: cover;
+	border-style: inset;
+}
+
+
+/* Start story button (this button starts the story and moves the user through the pages of the story */
+#startButton {
+	margin-left: 42.5%;
+	border-radius: 8px;
+	border-color: #32a31c;
+	width: 150px;
+	height: 35px;
+	font-family: 'IM Fell English SC', serif;
+	font-size: 18px;
+	margin-bottom: 4%;
+	margin-top: 8%;
+	color: #32a31c;
+	filter: drop-shadow(0px 0px .6rem #38b320);
+
+}
+
+/* User Promot and story text changes with the startStory() and the conuter */
+#text {
+	height: 5%;
+	width: 70%;
+    margin-left: 15%;
+	text-align: center;
+	font-size: 28px;
+}
+
+/* Users name input field on first page, this value displays when the story couner reaches 8 (the oppacity increases) */
+input{
+	height: 30px;
+	width: 175px;
+	background: none;
+	border: none;
+    border-bottom: 1.3px solid #32a31c;
+	margin-bottom: 0px;
+	text-align: center;
+	color: #32a31c;
+	font-size: 52px;
+	font-family: 'IM Fell English SC', serif;
+}
+
+
+/* Display the users name  */
+#name {
+
+	opacity: 0%;
+	width: 250px;
+	border-style: none;
+	background: none;
+	text-align: left;
+}
+
+/* End text at top of story, thank you user (appears when counter reaches 8, font size increases) */
+#textEnd {
+	/*display: none;*/
+	height: 5%;
+	width: 50%;
+	margin-left: 25%;
+	text-align: center;
+	font-size: 36px;
+
+}
+
+/* My name and student number  */
+.myName {
+	position: absolute;
+	font-size: 16px;
+	color: white;
+	opacity: 70%;
+}
+
+.myName:hover {
+	opacity: 100%;
+	filter: drop-shadow(0px 0px .2rem #38b320);
+}
+
+
+/* Music Controls for story */
+#musicButtons{
+	position: absolute;
+	top: 2%;
+	right: 2.5%;
+	display: flex;
+	flex-direction: row;
+	z-index: 2;
+}
+
+#music {
+	display: none;
+}
+
+/* Pause apple, position fixed, image layered with <p> relaying the pause function */
+#pause {
+	position: fixed;
+	right: 2%;
+	padding: 2px;
+	height: 50px;
+	width: 50px;
+	filter: drop-shadow(0px 0px .6rem #38b320);
+	padding-left: 20px;
+}
+
+#iconPause {
+	position: fixed;
+	font-size: 14px;
+	color: whitesmoke;
+	top: 2.5%;
+	right: 2.65%;
+	z-index: 3;
+}
+
+#iconPause:hover{
+	filter: drop-shadow(0px 0px .6rem #38b320);
+}
+
+
+
+
