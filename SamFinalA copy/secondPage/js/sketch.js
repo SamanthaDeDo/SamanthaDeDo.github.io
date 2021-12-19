@@ -33,10 +33,10 @@ function heart(x, y, size) {
 
 
 // Had to change this onclick function to key becuase it broke the code for navigating the pages once uploaded online. ****
-// function mousePressed() {
+function mousePressed() {
 
-//  u = heart (random (windowWidth/2), random (650), random(255)); 
-// }
+ u = heart (random (windowWidth/2), random (650), random(255)); 
+}
 
 // clear the sketch, I felt like this was a cool touch to add to the page, allowing for multiple sketches without refeshing the page.  -- >
 function keyPressed() { 
@@ -44,7 +44,7 @@ function keyPressed() {
  if (key == " ") {
    background(255);
  }
- if (key == "l") {
-  u = heart (random (windowWidth/2), random (650), random(255)); 
- }
+ // if (key == "l") {
+ //  u = heart (random (windowWidth/2), random (650), random(255)); 
+ // }
 }
