@@ -31,15 +31,20 @@ function heart(x, y, size) {
 // Apply an onclick function to it, giving the view the ability to control the amount of heart displayed. I added a random colour aspect to it,
 // Aesthetically it adds a colourful pop to the page, but it also signifies the idea that love can be random and come in all shapes, sizes, and significants. 
 
-function mousePressed() {
 
- u = heart (random (windowWidth/2), random (650), random(255)); 
-}
+// Had to change this onclick function to key becuase it broke the code for navigating the pages once uploaded online. ****
+// function mousePressed() {
+
+//  u = heart (random (windowWidth/2), random (650), random(255)); 
+// }
 
 // clear the sketch, I felt like this was a cool touch to add to the page, allowing for multiple sketches without refeshing the page.  -- >
 function keyPressed() { 
 
  if (key == " ") {
    background(255);
+ }
+ if (key == "l") {
+  u = heart (random (windowWidth/2), random (650), random(255)); 
  }
 }
