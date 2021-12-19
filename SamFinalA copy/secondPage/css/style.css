@@ -1,0 +1,46 @@
+html, body {
+  height: 100%;
+}
+
+/* This code is the same for the next three pages, minus the next button on the last page. I put the alignment in the body tag to 
+simplify styling of the text added to the page */
+body { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
+/* The text, buttons and audio are in theme with the first pages aesthetics. With the hopes of having a 
+have a fluid feeling of minimalism with optomised white space and user interaction. */
+#text{ 
+    width: 50%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+ }
+
+/* Navigation of pages, buttons position, rotation and size */
+#next {
+   transform: rotate(90deg);
+   opacity: 50%;
+   height: 75px;
+}
+
+#back {
+  transform: rotate(270deg);
+  opacity: 50%;
+  height: 75px;
+}
+
+/* Audio styling */
+audio {
+    display: none;
+  }
+
+/* the pause is set to fixed, to consistency reasons, the users should be able to quickly find and be able to pause audio. */
+ #pause {
+    position: fixed;
+    top: 2%;
+    right: 4%; 
+  }

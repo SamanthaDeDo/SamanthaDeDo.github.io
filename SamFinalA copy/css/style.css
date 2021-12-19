@@ -1,0 +1,90 @@
+
+html {
+	padding-top: 5%;
+}
+
+/* I wanted the first page to mirror the sketches to follow, the styling and format of each page is similar or the same. 
+	The idea fro this page was to create a div that contained all my text elements, and centering it to the page. I added 
+	grid to style the text elements within the div, and appied a background image to the parent container, setting its 
+	attachment to fixed, to create a small visual interaction for the user while navigating the page.  */
+
+#body {
+	width: 50%;
+	height: 650px;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-gap: 0px;
+	margin-top: 9%;
+	margin-bottom: 20%;
+	margin-right: 25%;
+	margin-left: 25%;
+	background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg);
+	background-attachment: fixed;
+  	background-size: 100% 100%;
+  	font-family: 'Roboto', sans-serif;
+	}
+
+	#title {
+		color: black;
+		text-align: center;
+		margin-top: 92px;
+	}
+
+	#text {
+		padding-top: 0%;
+		color: black;
+		width: 60%;
+		text-align: justify;
+		font-size: 18px;
+		padding-left: 20%;
+		padding-right: 20%;
+	}
+
+/* The auuto controls were fun to do, a little trickey to navigate at first, but I like the aspect of onhover. I think 
+it really flows with the design of the page, I feel not having to click, the pause esspecially, adds an intuitive aspect 
+to the page. I feel like it's almost like a little luxurious feature and a framiliar twist on the tradition pause function.  */
+	audio {
+		display: none;
+	}
+
+	#pause {
+		position: fixed;
+		top: 2%;
+		right: 4%;
+		color: black;
+		font-size: 20px;
+		
+	}
+
+/* I love vertical text as a border for the page, (inspired by last years trend) I liked to use the name text and the button 
+to frame the white space of the page, while also not taking up to much space and keeping the aesthetic minimal. */
+	.name {
+		writing-mode: vertical-rl;
+		text-orientation: sideways;
+		font-size: 12px;
+		color: black;
+		position: fixed;
+		top: 43%;
+		left: 2%;
+		filter: drop-shadow(1px 1px .9rem #ab43ab);
+		font-family: 'Roboto', sans-serif;
+	}
+
+/* I felt that the page needed somthing aesthetically, so I added a small image to spice things up. */
+	#img {
+		position: absolute;
+		bottom: 8.5%;
+		right: 47%;
+		left: 47%;
+		width: 100px;
+	}
+
+/* An image was used as a button, this was sized, position and rotated to be at the edge of the page. I wanted the project
+ to be based off of a modernly desiged web page, I felt adding a sleek and minimal aspect to the pages design. */
+	#back {
+ 		transform: rotate(90deg);
+  		opacity: 50%;
+  		height: 75px;
+	}
+

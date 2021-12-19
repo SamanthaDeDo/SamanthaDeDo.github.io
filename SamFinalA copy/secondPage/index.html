@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hearts</title>
+<!-- Links to style sheets, p5, font and sketch -->
+	<script type="text/javascript" src="js/p5.js"></script>
+	<script type="text/javascript" src="js/sketch.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+</head>
+
+<!-- This page is coded a little diffrently when it comes to the music interaction, to utilize the ability for multiple user interactions, onkeypress was used to start the music for the page, a small discription meets the viewer as they enter the page, relaying instructions on how to proceed. This purpose for this was to build anticipation and curiosity for the user, while staying within the style guidlines of the design. -->
+<body onkeypress="playAudio()">
+
+<!-- Pages linked through arrow images in the place of a buttons. -->
+<a style="position: fixed; top: 45%; left: 5%;" id="buttons" href="file:///Users/samanthadedonato/Documents/Computing%201/SamFinalA/index.html">
+<img id="back" src="https://img.icons8.com/ios/100/000000/collapse-arrow--v2.png"/>
+</a>
+<a style="position: fixed; top: 45%; right: 5%;" href="file:///Users/samanthadedonato/Documents/Computing%201/SamFinalA/thirdPage/index.html">
+<img id="next" src="https://img.icons8.com/ios/100/000000/collapse-arrow--v2.png"/>
+</a>
+
+<!-- Descriptive text. This was positioned within the html to remove it from the styling applied to the body in css -->
+<div id="text">
+<p onclick="text1()" style="position: fixed; top: 45%; left: 40%; right: 40%;">Press any key and click here to begin.<br><em> Space bar to clear page.</em> </p>
+</div>
+
+<!-- Audio link and on hover pause function for the pages music. I kept the same function for the pausing of music on the first three pages. Mostly because I think it's a cool interaction, but also not to confuse the user and to give them the ability to stop playing the music if need be.  -->
+<p id="pause" onmouseover="pauseAudio()">=</p>
+<audio id="music" controls= "value = 0.2">
+		<source src="sound/Eyes.mp3" controls="value = 0.2" type="">
+</audio>
+
+
+<!-- Functions for the music and text interactions.. The text is set to an onclick so it is only visiable for as long as the view requires, also adds a secondary interactive aspect to the page to engage the user.  -->
+<script type="text/javascript">
+	
+
+var audio = document.getElementById('music');
+
+			audio.volume = 0.2;
+
+			function playAudio() { 
+			  audio.play(); 
+			} 
+
+			function pauseAudio() { 
+ 			 audio.pause(); 
+			} 
+
+ 
+function text1() {
+	document.getElementById("text").style.display = "none";
+}
+
+</script>
+</body>
+
+</html>

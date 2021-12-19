@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Space</title>
+<!-- Links to style sheets, p5, font and sketch -->
+	<script type="text/javascript" src="js/p5.js"></script>
+	<script type="text/javascript" src="js/sketch.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+</head>
+
+<!-- This pages html are virtually identical to the previous page, *see previous page for more notes and refecances* -->
+
+<!-- Audio function -->
+<body onkeypress="playAudio()">
+
+<!-- Images in the pace of buttons to navigate pages -->
+<a style="position: fixed; top: 45%; left: 5%;" id="buttons" href="file:///Users/samanthadedonato/Documents/Computing%201/SamFinalA/secondPage/index.html">
+<img id="back" src="https://img.icons8.com/ios/100/000000/collapse-arrow--v2.png"/>
+</a>
+<a style="position: fixed; top: 45%; right: 5%;" href="http://localhost:8000/">
+<img id="next" src="https://img.icons8.com/ios/100/000000/collapse-arrow--v2.png"/>
+</a>
+
+<!-- Descriptive text, detailing the users instructions for the page -->
+<div id="text">
+<p onclick="text1()" style="position: fixed; top: 45%; left: 44%; right: 43%; color: white;">Click here to shoot stars.<br><em> Press any key for music </em> </p>
+</div>
+
+<!-- Pause music function -->
+<p id="pause" onmouseover="pauseAudio()">=</p>
+<audio id="music" controls= "value = 0.2">
+		<source src="sound/moon.mp3" controls="value = 0.2" type="">
+</audio>
+
+
+<!-- Text and audio functions for the page -->
+<script type="text/javascript">
+	
+
+var audio = document.getElementById('music');
+
+			audio.volume = 0.2;
+
+			function playAudio() { 
+			  audio.play(); 
+			} 
+
+			function pauseAudio() { 
+ 			 audio.pause(); 
+ 			 
+			} 
+
+	function text1() {
+	document.getElementById("text").style.display = "none";
+}
+
+</script>
+</body>
+
+</html>

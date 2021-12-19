@@ -1,0 +1,40 @@
+html, body {
+  height: 100%;
+}
+
+/* This pages html are virtually identical to the previous pages, *see previous page for more notes and refecances* */
+/* Main div styling for the sketch  */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  font-family: 'Roboto', sans-serif;
+} 
+
+/* navigation controls for the user, button style, position and rotation. */
+#next {
+   transform: rotate(90deg);
+   opacity: 50%;
+   height: 75px;
+}
+
+#back {
+  transform: rotate(270deg);
+  opacity: 50%;
+  height: 75px;
+}
+
+/* Audio styling */
+audio {
+    display: none;
+  }
+
+/* Pause music styling. */
+ #pause {
+    position: fixed;
+    top: 2%;
+    right: 4%; 
+  }

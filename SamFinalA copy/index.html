@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>My Universe</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+
+<!-- Mouse houver over div to play the music -->
+<div onmouseover="playAudio()" id="body">
+<div><h1 id="title">My Universe</h1></div> 
+<div><p id="text"><strong><em>"A little bit of love, music, and things that fuel my inspiration."</em> <br> <br>
+<em>My Universe</em> is an interpretation of Plato's <em>Symposium</em>, in a reflection of Socrates' interpretation of the phases of love, in reference to Diotima’s ladder. Signifying the processes of discovering initial feelings of love and attraction to eventually, the quest for love of divinity. Every page has an interactive musical component and a heavy use of colour. This theme is significant throughout the exhibition, its intention is to help the viewer better immerse themselves in the sketches by setting the tone and mood for the art work. This exhibit was created with the harmonic use of the four coding languages, html, css, JavaScript and P5. Each page of the <em>My Universe</em> is designed to be interactive, with the goal of allowing its viewer to virtually play with the art work. <em>My Universe</em> is meant to inspire its viewer to invoke emotion and to reflect on the idea of love and its meaning. </strong></p></div>
+<!-- Little icon image, of a heart -->
+<img id="img" src="images/img.png">
+</div>
+
+<!-- Button link to second page  -->
+<a style="position: fixed; top: 44%; right: 5%;" href="secondPage/index.html">
+<img id="back" src="https://img.icons8.com/ios/100/000000/collapse-arrow--v2.png"/>
+</a>
+
+<!-- Pause, hover over "="" to pause the music, aution link -->
+<p id="pause" onmouseover="pauseAudio()">=</p>
+<audio id="music" controls= "value = 0.2">
+		<source src="sound/Love.mp3" controls="value = 0.2" type="">
+</audio>
+
+<!-- My name  -->
+<p class="name">Samantha De Donato</p>
+
+
+
+
+
+
+<!-- Audio controles for the buttons above. -->
+<script type="text/javascript">
+	
+
+var audio = document.getElementById('music');
+
+			audio.volume = 0.2;
+
+			function playAudio() { 
+			  audio.play(); 
+			} 
+
+			function pauseAudio() { 
+ 			 audio.pause(); 
+			} 
+
+</script>
+
+
+
+
+
+
+
+
+
+<!-- <a href="file:///Users/samanthadedonato/Documents/Computing%201/Exhibit_Sam/Exhibit%20copy/index.html">
+<button>Next</button>
+</a>
+<a href="file:///Users/samanthadedonato/Documents/Computing%201/Exhibit_Sam/pageThree/index.html">
+<button>ClickMe</button>
+</a> -->
+
+</body>
+</html>
