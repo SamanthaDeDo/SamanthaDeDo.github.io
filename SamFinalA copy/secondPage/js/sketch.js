@@ -30,9 +30,7 @@ function heart(x, y, size) {
 // This was a cool manipulation of code found in the p5 referances, I was able to take the draw heart function from the original sketch and 
 // Apply an onclick function to it, giving the view the ability to control the amount of heart displayed. I added a random colour aspect to it,
 // Aesthetically it adds a colourful pop to the page, but it also signifies the idea that love can be random and come in all shapes, sizes, and significants. 
-
-
-// Had to change this onclick function to key becuase it broke the code for navigating the pages once uploaded online. ****
+ 
 function mousePressed() {
 
  u = heart (random (windowWidth/2), random (650), random(255)); 
@@ -43,8 +41,5 @@ function keyPressed() {
 
  if (key == " ") {
    background(255);
- }
- // if (key == "l") {
- //  u = heart (random (windowWidth/2), random (650), random(255)); 
- // }
-}
+ } 
+} 
